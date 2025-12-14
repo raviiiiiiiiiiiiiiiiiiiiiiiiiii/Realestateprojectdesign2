@@ -5,7 +5,7 @@
 <title>Trident Hills | Premium Residences in Panchkula</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Trident Hills Panchkula – Premium 4 BHK Residences starting from ₹2.79 Cr. Download brochure, floor plans & schedule site visit." />
+<meta name="description" content="Trident Hills Panchkula – Premium 4 BHK Residences starting from ₹2.79 Cr. Get brochure, pricing, floor plans & site visit details on WhatsApp." />
 
 <style>
 :root{
@@ -24,7 +24,7 @@ body{
   line-height:1.6;
 }
 a{text-decoration:none;color:inherit}
-section{padding:60px 20px}
+section{padding:70px 20px}
 .container{max-width:1100px;margin:auto}
 h1,h2,h3{font-weight:600}
 p{color:var(--muted);font-size:15px}
@@ -70,7 +70,7 @@ header{
     url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80");
   background-size:cover;background-position:center;
 }
-.hero-content{max-width:620px}
+.hero-content{max-width:650px}
 .badges{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
 .badge{
   border:1px solid var(--gold);
@@ -88,11 +88,11 @@ header{
 .stats{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:15px;margin-top:30px
+  gap:15px;margin-top:35px
 }
 .stat{
   background:var(--card);
-  padding:22px;text-align:center;border-radius:10px
+  padding:24px;text-align:center;border-radius:10px
 }
 .stat strong{display:block;font-size:22px;color:var(--gold)}
 
@@ -100,34 +100,38 @@ header{
 .list{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:12px;margin-top:25px
+  gap:14px;margin-top:30px
 }
 .list div{
   background:var(--card);
-  padding:15px;border-radius:8px;
+  padding:18px;border-radius:10px;
   border:1px solid var(--border);font-size:14px
 }
 
 /* FAQ */
-.faq{border:1px solid var(--border);border-radius:10px;margin-bottom:10px}
+.faq{border:1px solid var(--border);border-radius:12px;margin-bottom:12px}
 .faq button{
   width:100%;background:var(--card);
   border:none;color:var(--text);
-  padding:16px;text-align:left;cursor:pointer
+  padding:18px;text-align:left;cursor:pointer
 }
-.faq p{display:none;padding:16px;background:#141414}
+.faq p{display:none;padding:18px;background:#141414}
 
 /* FORM */
-form{display:grid;gap:12px}
+form{display:grid;gap:14px;margin-top:25px}
 input{
   background:#121212;border:1px solid var(--border);
-  padding:14px;border-radius:6px;color:var(--text)
+  padding:14px;border-radius:8px;color:var(--text)
 }
 .submit{
   background:var(--gold);color:#000;
-  padding:14px;border:none;border-radius:6px;
+  padding:14px;border:none;border-radius:8px;
   font-weight:600;cursor:pointer
 }
+
+/* MAP */
+.map{margin-top:30px;border-radius:14px;overflow:hidden}
+.map iframe{width:100%;height:360px;border:0}
 
 /* POPUP */
 .popup{
@@ -140,27 +144,40 @@ input{
 .popup.active{display:flex}
 .popup-box{
   background:var(--card);
-  padding:30px;max-width:380px;width:90%;
-  border-radius:12px;position:relative
+  padding:32px;max-width:420px;width:90%;
+  border-radius:14px;position:relative
 }
-.close{position:absolute;top:10px;right:15px;cursor:pointer}
+.close{position:absolute;top:12px;right:16px;cursor:pointer}
 
-/* MAP */
-.map{margin-top:25px;border-radius:12px;overflow:hidden}
-.map iframe{width:100%;height:320px;border:0}
-
-/* FLOAT */
-.float{
-  position:fixed;bottom:0;left:0;
-  width:100%;display:flex;z-index:1500
+/* FLOATING CALL */
+.call-float{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:var(--gold);
+  width:58px;height:58px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  color:#000;
+  z-index:1500;
 }
-.float a{
-  flex:1;text-align:center;padding:14px;font-weight:600
-}
-.wa{background:#25D366;color:#000}
-.call{background:var(--gold);color:#000}
 
-footer{padding:70px 20px 100px;font-size:14px}
+/* FOOTER */
+footer{
+  padding:80px 20px;
+  border-top:1px solid var(--border);
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:40px;
+  margin-top:40px
+}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--gold)}
 </style>
 </head>
 
@@ -174,7 +191,7 @@ footer{padding:70px 20px 100px;font-size:14px}
     </div>
     <div class="menu" id="menu">
       <a href="#about" onclick="closeMenu()">About</a>
-      <a href="#amenities" onclick="closeMenu()">Amenities</a>
+      <a href="#highlights" onclick="closeMenu()">Highlights</a>
       <a href="#location" onclick="closeMenu()">Location</a>
       <a href="#contact" onclick="closeMenu()">Enquire</a>
     </div>
@@ -184,10 +201,10 @@ footer{padding:70px 20px 100px;font-size:14px}
 <section class="hero">
   <div class="container hero-content">
     <h1>Trident Hills</h1>
-    <p>Premium 4 BHK Residences in Panchkula</p>
+    <p>Low-Density Premium 4 BHK Residences in Panchkula</p>
     <div class="badges">
       <div class="badge">₹2.79 Cr* Onwards</div>
-      <div class="badge">Low Density Floors</div>
+      <div class="badge">4 BHK Luxury Floors</div>
       <div class="badge">Possession 2027</div>
     </div>
     <div class="cta" onclick="openPopup()">Download Brochure</div>
@@ -198,29 +215,40 @@ footer{padding:70px 20px 100px;font-size:14px}
   <div class="container">
     <h2>About Trident Hills</h2>
     <p>
-      Trident Hills is a premium low-density residential township designed for families
-      who value space, privacy, and long-term lifestyle appreciation. Located in Panchkula,
-      the project blends nature-driven living with urban connectivity.
+      Trident Hills is a thoughtfully planned low-density luxury township in Panchkula,
+      developed for families who prioritise space, privacy, and long-term lifestyle value.
+      Surrounded by hills and greenery, the project offers a peaceful living environment
+      without compromising on city connectivity.
     </p>
+    <p>
+      With premium construction quality, wide internal roads, landscaped green zones,
+      and modern infrastructure, Trident Hills is ideal for both end-users and long-term
+      real estate investors.
+    </p>
+
     <div class="stats">
-      <div class="stat"><strong>200+</strong> Acres</div>
-      <div class="stat"><strong>3200+</strong> Sq.Ft</div>
-      <div class="stat"><strong>424</strong> Units</div>
-      <div class="stat"><strong>RERA</strong> Approved</div>
+      <div class="stat"><strong>200+</strong> Acres Township</div>
+      <div class="stat"><strong>3200+</strong> Sq.Ft Homes</div>
+      <div class="stat"><strong>424</strong> Total Units</div>
+      <div class="stat"><strong>RERA</strong> Registered</div>
     </div>
   </div>
 </section>
 
-<section id="amenities">
+<section id="highlights">
   <div class="container">
     <h2>Project Highlights</h2>
+    <p>
+      Trident Hills has been designed to offer a premium lifestyle with a strong focus on
+      low-density planning, natural surroundings, and high-end living standards.
+    </p>
     <div class="list">
-      <div>Low Density Gated Community</div>
-      <div>Clubhouse & Swimming Pool</div>
-      <div>Forest & Hill Views</div>
-      <div>24x7 Security</div>
-      <div>Wide Internal Roads</div>
-      <div>Excellent Connectivity</div>
+      <div>Low-Density Gated Community ensuring privacy and exclusivity</div>
+      <div>Spacious 4 BHK floors with optimal natural light and ventilation</div>
+      <div>Premium clubhouse, swimming pool and lifestyle amenities</div>
+      <div>Wide internal roads with landscaped green buffers</div>
+      <div>24x7 security with controlled access points</div>
+      <div>High-quality construction with modern specifications</div>
     </div>
   </div>
 </section>
@@ -228,12 +256,19 @@ footer{padding:70px 20px 100px;font-size:14px}
 <section id="location">
   <div class="container">
     <h2>Location Advantages</h2>
+    <p>
+      Located in Panchkula, Trident Hills offers seamless connectivity to Chandigarh,
+      IT hubs, educational institutions, healthcare facilities and major highways,
+      while maintaining a calm, pollution-free living environment.
+    </p>
     <div class="list">
-      <div>Chandigarh – 20 mins</div>
-      <div>IT Park – 14 kms</div>
-      <div>Airport – 30 mins</div>
-      <div>Schools & Hospitals Nearby</div>
+      <div>Chandigarh City Centre – approx. 20 minutes</div>
+      <div>IT Park Panchkula – approx. 14 km</div>
+      <div>Chandigarh International Airport – approx. 30 minutes</div>
+      <div>Reputed schools, hospitals and malls within close proximity</div>
+      <div>Excellent road connectivity to NH and surrounding regions</div>
     </div>
+
     <div class="map">
       <iframe src="https://www.google.com/maps?q=Trident%20Hills%20Panchkula&output=embed"></iframe>
     </div>
@@ -242,25 +277,57 @@ footer{padding:70px 20px 100px;font-size:14px}
 
 <section>
   <div class="container">
-    <h2>FAQs</h2>
-    <div class="faq"><button>Is this project RERA approved?</button><p>Yes, the project is RERA registered.</p></div>
-    <div class="faq"><button>What configurations are available?</button><p>Spacious 4 BHK luxury floors.</p></div>
-    <div class="faq"><button>Is this good for investment?</button><p>Yes, due to location and low density.</p></div>
-    <div class="faq"><button>Are home loans available?</button><p>Yes, via leading banks.</p></div>
-    <div class="faq"><button>How to book a site visit?</button><p>Submit enquiry or call us directly.</p></div>
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <button>Is Trident Hills RERA approved?</button>
+      <p>Yes, Trident Hills is a RERA registered project with all necessary approvals.</p>
+    </div>
+
+    <div class="faq">
+      <button>What configurations are available?</button>
+      <p>The project offers spacious 4 BHK luxury floors with premium specifications.</p>
+    </div>
+
+    <div class="faq">
+      <button>Is this project suitable for investment?</button>
+      <p>Yes, due to its location, low-density planning and future growth potential.</p>
+    </div>
+
+    <div class="faq">
+      <button>Are home loans available?</button>
+      <p>Home loans are available from leading national and private banks.</p>
+    </div>
+
+    <div class="faq">
+      <button>How can I schedule a site visit?</button>
+      <p>You can request a call back or directly contact us via WhatsApp or phone.</p>
+    </div>
   </div>
 </section>
 
 <section id="contact">
   <div class="container">
     <h2>Schedule a Call Back</h2>
+    <p>
+      Share your details below to receive the latest pricing, brochure, floor plans,
+      and site visit assistance.
+    </p>
+
     <form action="https://formsubmit.co/ravi2009u@gmail.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
-      <input name="name" placeholder="Full Name" required>
-      <input name="phone" placeholder="Phone Number" required>
-      <input name="email" placeholder="Email Address" required>
+      <input type="hidden" name="_subject" value="New Lead - Trident Hills Website">
+
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+
       <button class="submit">Request Call Back</button>
     </form>
+
+    <p style="margin-top:20px;">
+      Or <a href="https://wa.me/918102253186?text=Hi%20I'm%20interested%20in%20the%20Trident%20Hills%20project." style="color:var(--gold);font-weight:600;">Get Details on WhatsApp</a>
+    </p>
   </div>
 </section>
 
@@ -268,66 +335,82 @@ footer{padding:70px 20px 100px;font-size:14px}
   <div class="popup-box">
     <span class="close" onclick="closePopup()">✕</span>
     <h3>Get Best Price & Brochure</h3>
-    <p style="margin-bottom:15px;color:var(--muted);font-size:14px;">
-      Receive pricing, floor plans & site visit assistance.
+    <p style="margin-bottom:18px;color:var(--muted);font-size:14px;">
+      Receive pricing, floor plans and site visit assistance instantly.
     </p>
     <form action="https://formsubmit.co/ravi2009u@gmail.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
-      <input name="name" placeholder="Full Name" required>
-      <input name="phone" placeholder="Phone Number" required>
-      <input name="email" placeholder="Email Address" required>
+      <input type="hidden" name="_subject" value="Popup Lead - Trident Hills">
+
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+
       <button class="submit">Get Details</button>
     </form>
   </div>
 </div>
 
-<div class="float">
-  <a href="https://wa.me/919999999999" class="wa">WhatsApp</a>
-  <a href="tel:+919999999999" class="call">Call Now</a>
-</div>
+<a href="tel:8102253186" class="call-float">📞</a>
 
 <footer>
   <div class="container">
-
     <strong style="color:var(--gold);font-size:18px;">TRIDENT HILLS</strong>
-    <p style="max-width:480px;margin:10px 0 40px;">
-      Premium residential development offering low-density luxury living in Panchkula.
+    <p style="max-width:500px;margin-top:10px;">
+      Premium low-density residential development in Panchkula offering spacious
+      luxury homes designed for modern families and long-term value.
     </p>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;margin-bottom:40px;">
+    <div class="footer-grid">
       <div>
-        <strong>Quick Links</strong>
-        <p>About Project<br>Amenities<br>Location<br>Contact Us</p>
+        <strong>Quick Links</strong><br><br>
+        <a href="#about">About Project</a><br>
+        <a href="#highlights">Project Highlights</a><br>
+        <a href="#location">Location</a><br>
+        <a href="#contact">Contact Us</a>
       </div>
+
       <div>
-        <strong>Legal</strong>
-        <p>RERA Registered<br>Terms Apply</p>
+        <strong>Contact</strong><br><br>
+        Phone: <a href="tel:8102253186">8102253186</a><br>
+        Email: <a href="mailto:ravi2009u@gmail.com">Ravi2009u@gmail.com</a><br>
+        Location: Panchkula, Haryana
       </div>
+
       <div>
-        <strong>Contact</strong>
-        <p>+91 99XX XXX XXX<br>info@tridenthills.com<br>Panchkula</p>
+        <strong>Legal</strong><br><br>
+        RERA Registered Project<br>
+        Subject to availability<br>
+        Terms & Conditions Apply
       </div>
     </div>
 
-    <p style="font-size:12px;">
-      Disclaimer: This website is for informational purposes only. Images are for representation only.
-    </p>
-    <p style="font-size:12px;margin-top:8px;">
-      © 2025 Trident Hills. All Rights Reserved.
+    <p style="margin-top:40px;font-size:12px;">
+      Disclaimer: This website is for informational purposes only and does not
+      constitute an offer or solicitation. Images are for representation only.
+      Actual specifications may vary.
     </p>
 
+    <p style="margin-top:10px;font-size:12px;">
+      © 2025 Trident Hills. All Rights Reserved.
+    </p>
   </div>
 </footer>
 
 <script>
+const menu=document.getElementById("menu");
+const popup=document.getElementById("popup");
+
 function toggleMenu(){menu.classList.toggle("active")}
 function closeMenu(){menu.classList.remove("active")}
+
 document.querySelectorAll(".faq button").forEach(b=>{
   b.onclick=()=>{let p=b.nextElementSibling;p.style.display=p.style.display==="block"?"none":"block"}
 })
+
 function openPopup(){popup.classList.add("active")}
 function closePopup(){popup.classList.remove("active")}
-setTimeout(openPopup,3500)
+setTimeout(openPopup,3500);
 </script>
 
 </body>
