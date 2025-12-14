@@ -1,288 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Trident Hills | Premium Residences in Panchkula</title>
+<meta charset="UTF-8" />
+<title>Trident Hills | Premium Residences in Panchkula</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Trident Hills – Premium residences in Panchkula. Starting from ₹2.79 Cr. Download brochure, floor plans & schedule site visit." />
-  <meta name="keywords" content="Trident Hills Panchkula, Luxury Residences, 4 BHK Panchkula, Trident Realty" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Trident Hills Panchkula – Premium 4 BHK Residences starting from ₹2.79 Cr. Download brochure, floor plans & schedule site visit." />
 
-  <!-- STYLE -->
-  <style>
-    :root {
-      --bg: #0f0f0f;
-      --bg-soft: #151515;
-      --card: #1c1c1c;
-      --gold: #c8a24a;
-      --text: #f2f2f2;
-      --muted: #b3b3b3;
-      --border: #2a2a2a;
-    }
+<style>
+:root{
+  --bg:#0f0f0f;
+  --bg-soft:#151515;
+  --card:#1c1c1c;
+  --gold:#c8a24a;
+  --text:#f2f2f2;
+  --muted:#b3b3b3;
+  --border:#2a2a2a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,sans-serif;
+  line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+img{width:100%;border-radius:10px}
+section{padding:60px 20px}
+.container{max-width:1100px;margin:auto}
+h1,h2,h3{font-weight:600}
+p{color:var(--muted);font-size:15px}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* HEADER */
+header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(15,15,15,.9);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border)
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:15px 20px;
+  max-width:1100px;margin:auto
+}
+.logo{color:var(--gold);font-weight:700;letter-spacing:1px}
+.menu{
+  display:flex;gap:20px
+}
+.menu a{font-size:14px;color:var(--muted)}
+.menu a:hover{color:var(--gold)}
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer
+}
+.hamburger span{
+  width:25px;height:2px;background:var(--gold)
+}
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.6;
-    }
+/* MOBILE NAV */
+@media(max-width:768px){
+  .menu{
+    position:fixed;top:60px;left:-100%;
+    background:#111;
+    width:100%;height:100vh;
+    flex-direction:column;
+    padding:40px;
+    transition:.3s
+  }
+  .menu.active{left:0}
+  .hamburger{display:flex}
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+/* HERO */
+.hero{
+  min-height:90vh;
+  display:flex;align-items:center;
+  background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9)),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+}
+.hero-content{max-width:600px}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+.badge{
+  border:1px solid var(--gold);
+  color:var(--gold);
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:13px
+}
+.cta{
+  display:inline-block;
+  margin-top:25px;
+  background:var(--gold);
+  color:#000;
+  padding:14px 28px;
+  border-radius:6px;
+  font-weight:600
+}
 
-    img {
-      width: 100%;
-      display: block;
-      border-radius: 8px;
-    }
+/* CARDS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+  margin-top:30px
+}
+.stat{
+  background:var(--card);
+  padding:22px;
+  text-align:center;
+  border-radius:10px
+}
+.stat strong{
+  display:block;
+  font-size:22px;
+  color:var(--gold)
+}
 
-    section {
-      padding: 60px 20px;
-    }
+/* LISTS */
+.list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:12px;margin-top:25px
+}
+.list div{
+  background:var(--card);
+  padding:15px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  font-size:14px
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:12px
+}
 
-    h1, h2, h3 {
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
+/* TABLE */
+table{width:100%;border-collapse:collapse;margin-top:20px}
+th,td{
+  padding:14px;
+  border-bottom:1px solid var(--border);
+  font-size:14px
+}
+th{color:var(--gold);text-align:left}
 
-    h2 {
-      margin-bottom: 10px;
-    }
+/* FAQ */
+.faq{border:1px solid var(--border);border-radius:10px;margin-bottom:10px}
+.faq button{
+  width:100%;
+  background:var(--card);
+  border:none;
+  color:var(--text);
+  padding:15px;
+  text-align:left;
+  cursor:pointer
+}
+.faq p{
+  display:none;
+  padding:15px;
+  background:#141414
+}
 
-    p {
-      color: var(--muted);
-      font-size: 15px;
-    }
+/* FORM */
+form{display:grid;gap:12px}
+input{
+  background:#121212;
+  border:1px solid var(--border);
+  padding:14px;
+  border-radius:6px;
+  color:var(--text)
+}
+.submit{
+  background:var(--gold);
+  color:#000;
+  padding:14px;
+  border:none;
+  border-radius:6px;
+  font-weight:600
+}
 
-    /* HEADER */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(15,15,15,0.85);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
+/* POPUP */
+.popup{
+  position:fixed;top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,.8);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:2000
+}
+.popup.active{display:flex}
+.popup-box{
+  background:var(--card);
+  padding:30px;
+  max-width:380px;
+  width:90%;
+  border-radius:12px;
+  position:relative
+}
+.close{
+  position:absolute;top:10px;right:15px;
+  cursor:pointer;color:var(--muted)
+}
 
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+/* FLOAT */
+.float{
+  position:fixed;bottom:0;left:0;
+  width:100%;display:flex;z-index:1500
+}
+.float a{
+  flex:1;
+  text-align:center;
+  padding:14px;
+  font-weight:600
+}
+.wa{background:#25D366;color:#000}
+.call{background:var(--gold);color:#000}
 
-    .logo {
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: var(--gold);
-    }
-
-    .nav a {
-      margin-left: 20px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .nav a:hover {
-      color: var(--gold);
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.9)),
-        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
-    }
-
-    .hero-content {
-      max-width: 600px;
-    }
-
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 20px 0;
-    }
-
-    .badge {
-      border: 1px solid var(--gold);
-      padding: 6px 12px;
-      font-size: 13px;
-      border-radius: 20px;
-      color: var(--gold);
-    }
-
-    .cta {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 28px;
-      background: var(--gold);
-      color: #000;
-      font-weight: 600;
-      border-radius: 6px;
-    }
-
-    /* STATS */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
-    }
-
-    .stat {
-      background: var(--card);
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 22px;
-      color: var(--gold);
-    }
-
-    /* LIST */
-    .list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 12px;
-      margin-top: 25px;
-    }
-
-    .list div {
-      background: var(--card);
-      padding: 14px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      font-size: 14px;
-    }
-
-    /* GALLERY */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 12px;
-    }
-
-    /* TABLE */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    th, td {
-      padding: 14px;
-      border-bottom: 1px solid var(--border);
-      text-align: left;
-      font-size: 14px;
-    }
-
-    th {
-      color: var(--gold);
-      font-weight: 500;
-    }
-
-    /* FAQ */
-    .faq {
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 10px;
-    }
-
-    .faq button {
-      width: 100%;
-      padding: 15px;
-      background: var(--card);
-      border: none;
-      color: var(--text);
-      text-align: left;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .faq p {
-      padding: 15px;
-      display: none;
-      background: #141414;
-    }
-
-    /* FORM */
-    form {
-      display: grid;
-      gap: 12px;
-    }
-
-    input, textarea {
-      background: #121212;
-      border: 1px solid var(--border);
-      padding: 14px;
-      border-radius: 6px;
-      color: var(--text);
-      font-size: 14px;
-    }
-
-    button.submit {
-      background: var(--gold);
-      color: #000;
-      padding: 14px;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    /* FLOATING BAR */
-    .float {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      display: flex;
-      z-index: 1000;
-    }
-
-    .float a {
-      flex: 1;
-      text-align: center;
-      padding: 14px;
-      font-weight: 600;
-    }
-
-    .wa { background: #25D366; color: #000; }
-    .call { background: var(--gold); color: #000; }
-
-    footer {
-      padding: 60px 20px 90px;
-      text-align: center;
-      font-size: 12px;
-      color: var(--muted);
-    }
-  </style>
+footer{
+  padding:60px 20px 90px;
+  text-align:center;
+  font-size:12px;
+  color:var(--muted)
+}
+</style>
 </head>
 
 <body>
@@ -290,7 +237,10 @@
 <header>
   <div class="nav">
     <div class="logo">TRIDENT HILLS</div>
-    <div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="menu" id="menu">
       <a href="#about">About</a>
       <a href="#amenities">Amenities</a>
       <a href="#location">Location</a>
@@ -302,24 +252,13 @@
 <section class="hero">
   <div class="container hero-content">
     <h1>Trident Hills</h1>
-    <p>Premium Residences in Panchkula</p>
-
-    <div class="badge-row">
-      <div class="badge">₹ 2.79 Cr* Onwards</div>
+    <p>Premium 4 BHK Residences in Panchkula</p>
+    <div class="badges">
+      <div class="badge">₹2.79 Cr* Onwards</div>
       <div class="badge">4 BHK Floors</div>
       <div class="badge">Possession 2027</div>
     </div>
-
-    <a href="#contact" class="cta">Download Brochure</a>
-  </div>
-</section>
-
-<section>
-  <div class="container stats">
-    <div class="stat"><strong>200+</strong> Acres Township</div>
-    <div class="stat"><strong>3200+</strong> Sq.Ft Sizes</div>
-    <div class="stat"><strong>424</strong> Units</div>
-    <div class="stat"><strong>RERA</strong> Approved</div>
+    <a class="cta" onclick="openPopup()">Download Brochure</a>
   </div>
 </section>
 
@@ -327,9 +266,18 @@
   <div class="container">
     <h2>About Trident Hills</h2>
     <p>
-      Trident Hills is a premium gated residential community located in Panchkula,
-      surrounded by forest views and designed for spacious luxury living.
+      Trident Hills is a premium gated township in Panchkula, designed for those
+      who seek spacious homes, privacy, and nature-driven living. The project
+      offers low-density luxury floors with world-class infrastructure and
+      excellent connectivity.
     </p>
+
+    <div class="stats">
+      <div class="stat"><strong>200+</strong> Acres Township</div>
+      <div class="stat"><strong>3200+</strong> Sq.Ft Sizes</div>
+      <div class="stat"><strong>424</strong> Units</div>
+      <div class="stat"><strong>RERA</strong> Approved</div>
+    </div>
   </div>
 </section>
 
@@ -337,12 +285,12 @@
   <div class="container">
     <h2>Project Highlights</h2>
     <div class="list">
-      <div>Future Ready Living</div>
-      <div>Forest & Hill Views</div>
       <div>Low Density Development</div>
+      <div>Forest & Hill Views</div>
       <div>Gated Community</div>
+      <div>Clubhouse & Swimming Pool</div>
       <div>Power Backup</div>
-      <div>Clubhouse & Pool</div>
+      <div>24x7 Security</div>
     </div>
   </div>
 </section>
@@ -351,10 +299,10 @@
   <div class="container">
     <h2>Gallery</h2>
     <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1599423300746-b62533397364" />
-      <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115" />
-      <img src="https://images.unsplash.com/photo-1600585154207-9e1a6a53fbc5" />
-      <img src="https://images.unsplash.com/photo-1600585154084-4e5c43fcd5f6" />
+      <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115">
+      <img src="https://images.unsplash.com/photo-1600585154207-9e1a6a53fbc5">
+      <img src="https://images.unsplash.com/photo-1600585154084-4e5c43fcd5f6">
+      <img src="https://images.unsplash.com/photo-1599423300746-b62533397364">
     </div>
   </div>
 </section>
@@ -363,21 +311,9 @@
   <div class="container">
     <h2>Sizes & Pricing</h2>
     <table>
-      <tr>
-        <th>Configuration</th>
-        <th>Size</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <td>4 BHK Floor</td>
-        <td>3200 Sq.Ft+</td>
-        <td>₹ 2.79 Cr*</td>
-      </tr>
-      <tr>
-        <td>4 BHK + S</td>
-        <td>4900 Sq.Ft+</td>
-        <td>On Request</td>
-      </tr>
+      <tr><th>Type</th><th>Size</th><th>Price</th></tr>
+      <tr><td>4 BHK Floor</td><td>3200 Sq.Ft+</td><td>₹2.79 Cr*</td></tr>
+      <tr><td>4 BHK + S</td><td>4900 Sq.Ft+</td><td>On Request</td></tr>
     </table>
   </div>
 </section>
@@ -398,16 +334,12 @@
   <div class="container">
     <h2>FAQs</h2>
 
-    <div class="faq">
-      <button>Is Trident Hills RERA approved?</button>
-      <p>Yes, the project is RERA registered and approved.</p>
-    </div>
-
-    <div class="faq">
-      <button>When is possession?</button>
-      <p>Expected possession is Q3 2027.</p>
-    </div>
-
+    <div class="faq"><button>Is Trident Hills RERA approved?</button><p>Yes, the project is RERA registered and approved.</p></div>
+    <div class="faq"><button>What configurations are available?</button><p>Spacious 4 BHK luxury floors with servant rooms.</p></div>
+    <div class="faq"><button>When is possession?</button><p>Expected possession is Q3 2027.</p></div>
+    <div class="faq"><button>Is site visit possible?</button><p>Yes, site visits can be scheduled on request.</p></div>
+    <div class="faq"><button>Is this good for investment?</button><p>Yes, due to location, low density & upcoming growth.</p></div>
+    <div class="faq"><button>Are home loans available?</button><p>Leading banks provide home loan facilities.</p></div>
   </div>
 </section>
 
@@ -415,14 +347,28 @@
   <div class="container">
     <h2>Get Call Back</h2>
     <form action="https://formsubmit.co/ravi2009u@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="tel" name="phone" placeholder="Phone Number" required />
-      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="hidden" name="_captcha" value="false">
+      <input name="name" placeholder="Full Name" required>
+      <input name="phone" placeholder="Phone Number" required>
+      <input name="email" placeholder="Email Address" required>
       <button class="submit">Submit Enquiry</button>
     </form>
   </div>
 </section>
+
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <span class="close" onclick="closePopup()">✕</span>
+    <h3>Get Best Price & Brochure</h3>
+    <form action="https://formsubmit.co/ravi2009u@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input name="name" placeholder="Full Name" required>
+      <input name="phone" placeholder="Phone Number" required>
+      <input name="email" placeholder="Email Address" required>
+      <button class="submit">Get Details</button>
+    </form>
+  </div>
+</div>
 
 <div class="float">
   <a href="https://wa.me/919999999999" class="wa">WhatsApp</a>
@@ -430,17 +376,20 @@
 </div>
 
 <footer>
-  Disclaimer: This is not the official website of the developer. Images used are for representation purposes only.
+  Disclaimer: This is not the official website of the developer. Images are for representation only.
 </footer>
 
 <script>
-  document.querySelectorAll(".faq button").forEach(btn => {
-    btn.onclick = () => {
-      const p = btn.nextElementSibling;
-      p.style.display = p.style.display === "block" ? "none" : "block";
-    };
-  });
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+document.querySelectorAll(".faq button").forEach(b=>{
+  b.onclick=()=>{const p=b.nextElementSibling;p.style.display=p.style.display==="block"?"none":"block";}
+});
+function openPopup(){document.getElementById("popup").classList.add("active")}
+function closePopup(){document.getElementById("popup").classList.remove("active")}
+setTimeout(openPopup,3000);
 </script>
 
 </body>
-    </html>
+</html>
